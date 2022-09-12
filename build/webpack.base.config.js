@@ -3,8 +3,8 @@ const path = require('path')
 module.exports = {
   context: path.resolve(__dirname, '../'),
   entry: {
-    index: path.resolve(__dirname, '../src/index.jsx'),
-    log: path.resolve(__dirname, '../src/log.jsx'),
+    home: path.resolve(__dirname, '../src/entries/Home.web.jsx'),
+    about: path.resolve(__dirname, '../src/entries/About.web.jsx'),
   },
   output: {
     path: path.resolve(__dirname, '../dist/web'),
@@ -28,6 +28,9 @@ module.exports = {
     ],
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx', '.json']
+    extensions: ['*', '.js', '.jsx', '.json'],
+    alias: {
+      '@': path.resolve(__dirname, '../src'),
+    },
   },
 }

@@ -4,17 +4,10 @@
 
 module.exports = {
     origin: 'https://test.miniprogram.com',
-    entry: '/',
+    entry: '/app',
     router: {
-        home: [
-            '/(home|index)?',
-            '/index.html',
-            '/test/(home|index)',
-        ],
-        other: [
-            '/test/list/:id',
-            '/test/detail/:id',
-        ],
+        home: [ '/home' ],
+        about: [ '/about' ],
     },
     redirect: {
         notFound: 'home',
@@ -24,7 +17,7 @@ module.exports = {
         autoBuildNpm: 'npm',
     },
     app: {
-        navigationBarTitleText: 'miniprogram-project',
+        navigationBarTitleText: '一个学者',
     },
 	appExtraConfig: {
         sitemapLocation: 'sitemap.json',
@@ -43,7 +36,7 @@ module.exports = {
 		attrValueReduce: 5000,
 	},
     projectConfig: {
-        projectname: 'kbone-template-react',
-        appid: '',
+        projectname: 'mp-self',
+        appid: 'wxfd887e5784f41e9e',
     },
 }
